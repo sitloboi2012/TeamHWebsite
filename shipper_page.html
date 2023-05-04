@@ -4,6 +4,7 @@
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shipper Page</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
     </head>
     <body>
@@ -12,24 +13,126 @@
         </header>
         <main>
             <div class="main-container">
+                <h3>District 7 Distribution Hub</h3>
                 <div class="active-order">
-                    <h3>Active Order</h3>
-                    <table>
-                        <tr>
-                            <th>Order ID</th>
-                            <th>Product Name</th>
-                            <th>Product Description</th>
-                            <th>Delivery Time</th>
-                        </tr>
-                    </table>
-                </div>
-                <div class="recent-order">
-                    <h3>Recent Order</h3>
+                    <h3>Active Orders</h3>
+                    <div class="table-active">
+                        <table>
+                            <colgroup>
+                                <col span="1" style="background-color: #a776c5">
+                                <col span="4" style="background-color: #45a9a6">
+                            </colgroup>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer Name</th>
+                                <th>Address</th>
+                                <th>Delivery Time</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr onclick="window.location='#';">
+                                <td>1234</td>
+                                <td>Bao Hoang</td>
+                                <td>2C Adaluma Avenue, Pooraka, South Australia 5095</td>
+                                <td>07/12/2023</td>
+                                <td>
+                                    <select id="status" onchange="changeStatus(this)">
+                                        <option value="Active">Active</option>
+                                        <option value="Delivered">Delivered</option>
+                                        <option value="Canceled">Canceled</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5678</td>
+                                <td>Huy Vo</td>
+                                <td>11 Gouger Street, Adelaide, South Australia 5000</td>
+                                <td>08/05/2023</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>1357</td>
+                                <td>Minh Ha Vu</td>
+                                <td>8A Newman Road, Forestville, South Australia 5083</td>
+                                <td>12/05/2023</td>
+                                <td>Delivered</td>
+                            </tr>
+                            <tr>
+                                <td>2648</td>
+                                <td>Hau Nguyen</td>
+                                <td>10 Sutherland Road, Woodville, South Australia 5025</td>
+                                <td>20/06/2023</td>
+                                <td>Canceled</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="recent-order">
+                        <h3>Recent Orders</h3>
+                        <table>
+                            <colgroup>
+                                <col span="1" style="background-color: #a776c5">
+                                <col span="4" style="background-color: #54999b">
+                            </colgroup>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer Name</th>
+                                <th>Address</th>
+                                <th>Delivery Time</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>1234</td>
+                                <td>Huy Vo</td>
+                                <td>2C Adaluma Avenue, Pooraka, South Australia 5095</td>
+                                <td>07/12/2023</td>
+                                <td>Delivered</td>
+                            </tr>
+                            <tr>
+                                <td>5678</td>
+                                <td>Creasic Dang</td>
+                                <td>11 Gouger Street, Adelaide, South Australia 5000</td>
+                                <td>08/05/2023</td>
+                                <td>Delivered</td>
+                            </tr>
+                            <tr>
+                                <td>1357</td>
+                                <td>Hau Nguyen</td>
+                                <td>8A Newman Road, Forestville, South Australia 5083</td>
+                                <td>12/05/2023</td>
+                                <td>Canceled</td>
+                            </tr>
+                            <tr>
+                                <td>2648</td>
+                                <td>Minh Ha Vu</td>
+                                <td>10 Sutherland Road, Woodville, South Australia 5025</td>
+                                <td>20/06/2023</td>
+                                <td>Canceled</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </main>
         <footer style="background-color: black; color: white">
             <h3>Temporary Footer</h3>
         </footer>
+
+        <script>
+            
+            function changeStatus(status) {
+                var allTableCells = document.getElementsByTagName("td")
+                for (var i = 0, max = allTableCells.length; i < max; i ++) {
+                    var node = allTableCells[i];
+                    var currentText = node.childNodes[0].nodeValue;
+                    console.log(currentText)
+                    if (currentText === "Active") {
+                        node.style.backgroundColor = "blue";
+                    } else if (currentText === "Delivered") {
+                        node.style.backgroundColor = "green";
+                    } else if (currentText === "Canceled") {
+                        node.style.backgroundColor = "red";
+                    };
+                }
+            };
+        </script>
     </body>
 </html>
