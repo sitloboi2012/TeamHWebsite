@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lazada - Sign Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://kit.fontawesome.com/4510976b27.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Lazada - Sign Up</h1>
+    <form>
+      <label for="group">I am a:</label>
+      <select id="group">
+        <option value="customer">Customer</option>
+        <option value="vendor">Vendor</option>
+        <option value="shipper">Shipper</option>
+      </select>
+      <div id="customer-form">
+        <label for="customer-email">Email:</label>
+        <input type="email" id="customer-email" name="customer-email" required>
+        <label for="customer-password">Password:</label>
+        <input type="password" id="customer-password" name="customer-password" required>
+      </div>
+      <div id="vendor-form">
+        <label for="vendor-email">Email:</label>
+        <input type="email" id="vendor-email" name="vendor-email" required>
+        <label for="vendor-password">Password:</label>
+        <input type="password" id="vendor-password" name="vendor-password" required>
+      </div>
+      <div id="shipper-form">
+        <label for="shipper-email">Email:</label>
+        <input type="email" id="shipper-email" name="shipper-email" required>
+        <label for="shipper-password">Password:</label>
+        <input type="password" id="shipper-password" name="shipper-password" required>
+      </div>
+      <button type="submit" id="login-button">Login</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
