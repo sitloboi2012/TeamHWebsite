@@ -21,8 +21,8 @@ form {
     width: 44%;
 }
 .right-side {
-    width: 618px; 
-    /* = 200 + 200 + 100 + 100 + 6 + 6 + 6 (big images, small images and gaps respectively) */
+    width: 612px; 
+    /* = 200 + 200 + 100 + 100 + 6 + 6 (big images, small images and gaps respectively) */
 }
 input {
     padding: 6px;
@@ -33,12 +33,13 @@ input {
     width: 200px;
     height: 200px;
     background: gainsboro;
-    /* border: 1px solid; */
+    border: 0.25px solid;
 }
-.image-box:nth-child(3),
-.image-box:nth-child(4) {
-    width: 100px;
-    height: 100px
+.last-two div {
+    height: calc(100px - 3px);
+}
+.last-two div:last-child {
+    margin-top: 6px;
 }
 .image-container {
     display: flex;
