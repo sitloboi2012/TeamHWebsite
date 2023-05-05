@@ -1,0 +1,57 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #ffffff;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	max-width: 500px;
+	background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8), url(https://cdn.dribbble.com/users/6111626/screenshots/14319707/media/dc42f84eedbe9000699e5a6ef77dcd17.jpg?compress=1&resize=400x300&vertical=tophttps://cdn.dribbble.com/users/6111626/screenshots/14319707/media/dc42f84eedbe9000699e5a6ef77dcd17.jpg?compress=1&resize=400x300&vertical=top));
+	background-color: #fcfcfc;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+	text-align: center;
+	color: #f16c20;
+	margin-bottom: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+form_
+
+label {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+input[type=text], input[type=password], select {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 20px;
+}
+
+input[type=submit] {
+	background-color: #f16c20;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #e65a1d;
+}
