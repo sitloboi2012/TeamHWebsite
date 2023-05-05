@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="addProduct.css" type="text/css" />
+    <title>Add New Products</title>
+  </head>
+  <body>
+    <h1>Add New Products</h1>
+    <form method="post" action="processing" enctype="multipart/form-data">
+      <div class="left-side">
+        <div>
+          <h4>
+          <label for="product-name">Product name</label> 
+          </h4>
+          <input id="product-name" name="product-name" type="text" />
+          <p class="small-text"> Enter 10 - 20 words</p>
+        </div>
+        <div>
+          <h4>
+          <label for="brand">Brand</label> 
+          </h4>
+          <input id="brand" name="brand" type="text" />
+        </div>
+        <div>
+          <h4>
+          <label for="price">Price</label> 
+          </h4>
+          <input id="price" name="price" type="number" />
+        </div>
+        <div>
+          <h4>
+          <label for="description">Description</label> 
+          </h4>
+          <input id="description" name="description"></input>
+          <p class="small-text">No more than 500 characters</p>
+        </div>
+      </div>
+
+      <div class="right-side">
+        <div>
+          <h4> Product images </h4>
+          <div class="image-container">
+            <div class="image-box"></div>
+            <div class="image-box"></div>
+            <div class="image-box"></div>
+            <div class="image-box"></div>
+          </div>
+          <p class="small-text"> You need to add at least 4 images. Picture dimension must be in range of 330x330 and 5000x5000 px. File size limit 2MB.</p>
+        </div>
+        <div class="buttons">
+          <button type="reset">Reset</button>
+          <button id="submit-btn" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
