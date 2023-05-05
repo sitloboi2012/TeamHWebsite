@@ -29,8 +29,9 @@ th {
     background-color: #a776c5;
 }
 
-th, td {
-    padding: 8px;
+th,
+td {
+    padding: 10px 1px;
     border-bottom: 1px solid #DDD;
 }
 
@@ -48,8 +49,36 @@ tr:hover {
     padding: 20px 20px;
 }
 
-.active-order h3, .recent-order h3  {
+.active-order h3,
+.recent-order h3 {
     margin: 30px 30px;
     padding: 20px 20px;
     background-color: #588157;
+}
+
+.overlay {
+    width: 50%;
+    height: 50%;
+    background-color: green;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: blue;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.overlay-container {
+    transition: transform 0.4s;
+    opacity: 0.3;
 }
