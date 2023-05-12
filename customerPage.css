@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#header {
+    height: 119px;
+    width: 100%;
+}
+.banner-container {
+    height: 353px;
+    width: 1226px;
+    background: gainsboro;
+    margin-bottom: 24px;
+}
+.product-container {
+    width: 190px;
+    height: 282px;
+    background: gainsboro;
+    border: 0.25px solid;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-section {
+    display: flex;
+    width: 1226px;
+    justify-content: space-between;
+    padding: 24px 0; /* set this for now */
+}
