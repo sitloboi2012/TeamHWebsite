@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= page_title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/login_sign_up.css">
+    <script src="https://kit.fontawesome.com/4510976b27.js" crossorigin="anonymous"></script>
+    <script src="/javascripts/login_sign_up.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1><%= form_title %></h1>
+        <form method="post">
+            <label for="group">Register as a:</label>
+            <select id="userType">
+                <option value="customer">Customer</option>
+                <option value="vendor">Vendor</option>
+                <option value="shipper">Shipper</option>
+            </select>
+            <div id="form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" id="login-button" onclick="signUpAlert()"></button>
+        </form>
+    </div>
+</body>
+
+</html>
