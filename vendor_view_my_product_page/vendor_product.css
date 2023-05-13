@@ -294,6 +294,25 @@ tbody tr td{
 .col-4:hover{
     transform: translateY(-5px);
 }
+.items img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+.items h3{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 70px;
+}
+.small-container-profile{
+    padding-left: 60px;
+    padding-top: 40px;
+    font-size: 50px;
+}
+.info{
+    padding: 30px 0 30px 0;
+}
 @media (max-width: 767px){
     #menu {
         width: 350px;
