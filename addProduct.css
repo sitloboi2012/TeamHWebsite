@@ -3,7 +3,7 @@
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-body {
+main {
     margin: 30px;
 }
 form {
@@ -12,61 +12,116 @@ form {
     justify-content: space-between;
 }
 .left-side, .right-side {
-    height: 550px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .left-side {
     width: 44%;
+    margin-right: 30px;
 }
 .right-side {
-    width: 612px; 
-    /* = 200 + 200 + 100 + 100 + 6 + 6 (big images, small images and gaps respectively) */
+    width: min-content; 
 }
 input {
-    padding: 6px;
+    padding: 12px;
     width: 100%;
     box-sizing: border-box;
 }
-.image-box {
+textarea {
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+.image-container img {
     width: 200px;
     height: 200px;
-    background: gainsboro;
-    border: 0.25px solid;
+    cursor: pointer;
 }
-.last-two div {
-    height: calc(100px - 3px);
+.image-container img {
+    /* when user uploads an image, the image is within the container no matter the size */
+    width: 200px;
+    height: 200px;
 }
-.last-two div:last-child {
-    margin-top: 6px;
+.image-container>input {
+    /* Hide the button titled "Choose file" */
+    display: none;
+}
+.last-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.last-two img {
+    height: calc(100px - 8px);
 }
 .image-container {
     display: flex;
-    gap: 6px;
-}
-#description {
-    height: 180px;
+    gap: 12px;
 }
 .small-text {
     font-size: 14px;
-    color: grey
+    color: grey;
+    margin-top: 12px;
+}
+.left-side h4 {
+    color: #254e95;
 }
 h4 {
     margin-bottom: 12px;
+    font-size: 16px;
 }
 button {
     padding: 12px;
     width: 200px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 .buttons {
     display: flex;
     justify-content: flex-end;
-    gap: 6px;
+    gap: 12px;
 }
 #submit-btn {
     background: #1D70FF; /*lazada color*/
     color: white;
+}
+#reset-btn {
+    background: gainsboro;
+}
+@media screen and (max-width: 1024px) {
+    h1 {
+        text-align: center;
+    }
+    form {
+        flex-direction: column;
+        width: max-content;
+        gap: 60px;
+        margin: 30px auto;
+    }
+    .left-side {
+        width: 100%;
+    }
+    .right-side {
+        height: 430px;
+    }
+    button {
+        width: calc(100%/2);
+    }
+}
+@media screen and (max-width: 768px) {
+    .image-container {
+        flex-wrap: wrap;
+    }
+    .last-two {
+        flex-direction: row;
+        width: 100%;
+        gap: 12px;
+    }
+    .right-side {
+        height: 500px;
+    }
 }

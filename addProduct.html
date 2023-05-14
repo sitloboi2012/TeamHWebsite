@@ -5,59 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="addProduct.css" type="text/css" />
-    <title>Add New Products</title>
+    <title>Add New Product</title>
   </head>
   <body>
-    <h1>Add New Products</h1>
-    <form method="post" action="processing" enctype="multipart/form-data">
-      <div class="left-side">
-        <div>
-          <h4>
-          <label for="product-name">Product name</label> 
-          </h4>
-          <input id="product-name" name="product-name" type="text" />
-          <p class="small-text"> Enter 10 - 20 words</p>
-        </div>
-        <div>
-          <h4>
-          <label for="brand">Brand</label> 
-          </h4>
-          <input id="brand" name="brand" type="text" />
-        </div>
-        <div>
-          <h4>
-          <label for="price">Price</label> 
-          </h4>
-          <input id="price" name="price" type="number" />
-        </div>
-        <div>
-          <h4>
-          <label for="description">Description</label> 
-          </h4>
-          <input id="description" name="description"></input>
-          <p class="small-text">No more than 500 characters</p>
-        </div>
-      </div>
-
-      <div class="right-side">
-        <div>
-          <h4> Product images </h4>
-          <div class="image-container">
-            <div class="image-box"></div>
-            <div class="image-box"></div>
-            <div class="last-two">
-              <div class="image-box"></div>
-              <div class="image-box"></div>
-            </div>
+    <main>
+      <h1>Add New Product</h1>
+      <form method="post" action="processing" enctype="multipart/form-data">
+        <!-- Change 'action' -->
+        <div class="left-side">
+          <div>
+            <h4>
+              <label for="product-name">Product name</label>
+            </h4>
+            <input
+              id="product-name"
+              name="product-name"
+              type="text"
+              placeholder="Nike Air Force"
+            />
+            <p class="small-text">Enter 10 - 20 characters</p>
           </div>
-          <p class="small-text"> You need to add at least 4 images. Picture dimension must be in range of 330x330 and 5000x5000 px. File size limit 2MB.</p>
+          <div>
+            <h4>
+              <label for="brand">Brand</label>
+            </h4>
+            <input id="brand" name="brand" type="text" placeholder="Nike" />
+          </div>
+          <div>
+            <h4>
+              <label for="price">Price</label>
+            </h4>
+            <input id="price" name="price" type="number" />
+          </div>
+          <div>
+            <h4>
+              <label for="description">Description</label>
+            </h4>
+            <textarea
+              id="description"
+              name="description"
+              rows="10"
+              placeholder="Brand-new shoes just imported from Australia. Can endure hot and humid weather."
+            ></textarea>
+            <p class="small-text">No more than 500 characters</p>
+          </div>
         </div>
-        <div class="buttons">
-          <button type="reset">Reset</button>
-          <button id="submit-btn" type="submit">Submit</button>
+        <!-- Data validation is put in model/Product.js file -->
+
+        <div class="right-side">
+          <div>
+            <h4>Product images</h4>
+            <div class="image-container">
+              <label for="input-image">
+                <img
+                  id="display-image"
+                  src="./public/images/product-demo.png"
+                />
+              </label>
+              <input id="input-image" type="file" />
+
+              <img src="./public/images/add-image-large.png" />
+              <!-- The last two images -->
+              <div class="last-two">
+                <img src="./public/images/add-image-small.png" />
+                <img src="./public/images/add-image-small.png" />
+              </div>
+            </div>
+            <p class="small-text">
+              You need to add 1 to 4 images. Picture dimension should be 200 x
+              200 px. File size limit 2MB. Image must not be blurry.
+            </p>
+          </div>
+          <div class="buttons">
+            <button id="reset-btn" type="reset">Reset</button>
+            <button id="submit-btn" type="submit">Submit</button>
+          </div>
         </div>
-      </div>
-    </form>
-    <a href="https://www.figma.com/file/YZoD4PvHoiwRTVmtsUYL5z/add-new-product_page?node-id=0%3A1&t=MkzCG6brqSzjTeEB-1" target="_blank"> Design link (open in a new tab)</a>
+      </form>
+    </main>
+    <script src="./addProduct.js"></script>
   </body>
 </html>
