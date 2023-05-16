@@ -17,6 +17,10 @@ h3 {
 }
 
 table {
+    border-collapse: collapse;
+}
+
+.container-table {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -36,7 +40,7 @@ td {
 }
 
 
-tr:hover {
+tr:hover, td:hover {
     background-color: #D6EEEE;
 }
 
@@ -59,7 +63,7 @@ tr:hover {
 .overlay {
     width: 50%;
     height: 50%;
-    background-color: green;
+    background-color: #d4a373;
     border-radius: 3px;
     position: absolute;
     top: 0;
@@ -67,7 +71,7 @@ tr:hover {
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
     padding: 0 30px 30px;
-    color: blue;
+    color: black;
     visibility: hidden;
     transition: transform 0.4s, top 0.4s;
 }
@@ -81,4 +85,34 @@ tr:hover {
 .overlay-container {
     transition: transform 0.4s;
     opacity: 0.3;
+}
+
+.row {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: -5px;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+}
+
+.column {
+    flex: 50%;
+    padding: 5px;
+}
+
+td select {
+    width: 140px;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #d4a373;
+    text-align: center;
+}
+
+#close-button {
+    position: fixed;
+    top: 1%;
+    right: 1%;
 }
