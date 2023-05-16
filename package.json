@@ -2,7 +2,11 @@
   "name": "teamhwebsite",
   "version": "1.0.0",
   "description": "Web Programming Group Assignment 2",
+<<<<<<< Updated upstream
   "main": "addProduct.js",
+=======
+  "main": "script.js",
+>>>>>>> Stashed changes
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

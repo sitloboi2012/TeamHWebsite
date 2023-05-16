@@ -29,6 +29,13 @@ input {
     width: 100%;
     box-sizing: border-box;
 }
+<<<<<<< Updated upstream
+=======
+select {
+    width: 100%;
+    padding: 8px;
+}
+>>>>>>> Stashed changes
 textarea {
     padding: 12px;
     width: 100%;
@@ -42,8 +49,13 @@ textarea {
 }
 .image-container img {
     /* when user uploads an image, the image is within the container no matter the size */
+<<<<<<< Updated upstream
     width: 200px;
     height: 200px;
+=======
+    /* width: 200px;
+    height: 200px; */
+>>>>>>> Stashed changes
 }
 .image-container>input {
     /* Hide the button titled "Choose file" */
@@ -106,7 +118,14 @@ button {
         width: 100%;
     }
     .right-side {
+<<<<<<< Updated upstream
         height: 430px;
+=======
+        height: auto;
+    }
+    .buttons {
+        margin-top: 80px;
+>>>>>>> Stashed changes
     }
     button {
         width: calc(100%/2);
@@ -116,12 +135,45 @@ button {
     .image-container {
         flex-wrap: wrap;
     }
+<<<<<<< Updated upstream
+=======
+    .left-side {
+        width: 100%;
+    }
+    .image-container img {
+        width: 115px;
+        height: 115px;
+    }
+    .last-two img {
+        height: calc(115px/2)
+    }
+>>>>>>> Stashed changes
     .last-two {
         flex-direction: row;
         width: 100%;
         gap: 12px;
     }
+<<<<<<< Updated upstream
     .right-side {
         height: 500px;
+=======
+    button {
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 280px) {
+    .image-container img {
+        width: 98px;
+        height: 98px;
+    }
+    .last-two img {
+        height: calc(98px/2)
+    }
+    .small-text {
+        text-align: justify;
+    }
+    .left-side, h1 {
+        width: 208px;
+>>>>>>> Stashed changes
     }
 }

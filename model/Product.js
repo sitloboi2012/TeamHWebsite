@@ -14,8 +14,14 @@ const productSchema = new mongoose.Schema( {
         minlength: 10,
         maxlength: 20
     },
+<<<<<<< Updated upstream
     brand: {
         type: String,
+=======
+    category: {
+        type: String,
+        enum: ['shoes', 'stationery', 'phone case']
+>>>>>>> Stashed changes
     },
     price: {
         type: Number,
@@ -36,4 +42,7 @@ const productSchema = new mongoose.Schema( {
 const Product = mongoose.model('Product', productSchema);
 
 module.exports = Product;
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
