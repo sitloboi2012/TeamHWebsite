@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        </style>
+</head>
+<body>
+
+    <section id="menu">
+        <div class="logo">
+            <img src="https://www.logolynx.com/images/logolynx/ca/caec3ebc94200aabb4a2c31891100f28.png" alt="">
+            <h2>Harrington</h2>
+        </div>
+
+        <div class="items">
+            <img src="https://i.pinimg.com/564x/63/de/f7/63def773d15cd3c80bb280eb51dc5a04.jpg" class="rounded-circle" width="300">
+            <h3>Hieu Dang</h3>
+            <li><i class="fas fa-home"></i><a href="vendorPage.html">Home</a></li>
+            <li><i class="fas fa-wrench"></i><a href="#">Setting</a></li>
+            <li><i class="fas fa-sign-out"></i><a href="#">Sign Out</a></li>
+        </div>
+    </section>
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fas fa-bars"></i>
+                </div>
+                <div class="search">
+                    <i class="far fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <a href="profilePage.html"><img src="https://i.pinimg.com/564x/d8/33/df/d833dfc0aee636bb8dff1e1a64c490ba.jpg" alt=""></a>
+            </div>
+        </div>
+        <h3 class="i-name">
+            Personal Information
+        </h3>
+        <div class="small-container-profile">
+            <div class="rowProfile">
+                <div class="info">
+                    <h5>Full Name:      Dang Trung Hieu</h5>
+                </div>
+                <div class="info">
+                    <h5>Email:      hieu1234@gmail.com</h5>
+                </div>
+                <div class="info">
+                    <h5>Address:      District 7, HCMC</h5>
+                </div>
+                <div class="info">
+                    <h5>Phone:      +84 59691234</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $('#menu-btn').click(function(){
+            $('#menu').toggleClass("active");
+        })
+    </script>
+</body>
