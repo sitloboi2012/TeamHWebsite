@@ -6,7 +6,7 @@
 }
 
 .header-wrapper {
-    margin-bottom: 400px;
+    margin-bottom: 100px;
     background: #eceaff;
     color: #525252;
 }
@@ -242,15 +242,11 @@ footer .footer_main .tag .search_bar {
     height: 30px;
     background: rgb(255, 255, 255);
     border-radius: 25px;
-    /* display: flex; */
 }
 
 footer .footer_main .tag .search_bar input {
     width: 200px;
     padding: 2px 8px;
-    /* position: relative;
-    top: 17%;
-    left: 6%; */
     border: none;
     outline: none;
     font-size: 13px;
@@ -259,11 +255,9 @@ footer .footer_main .tag .search_bar input {
 }
 
 footer .footer_main .tag .search_bar button {
-    /* padding: 7px 15px; */
     padding: 7px;
     background: #ce4621;
     border: none;
-    /* margin-top: 15px; */
     border-radius: 25px;
     color: #fff;
     cursor: pointer;
@@ -591,7 +585,6 @@ footer .end span {
         display: flex;
         justify-content: center;
         align-items: center;
-        /* margin-top: 10px; */
     }
 
     footer .footer_main .tag .search_bar input {
