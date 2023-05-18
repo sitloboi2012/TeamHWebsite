@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vendor Page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    </head>
+<body>
+
+    <section id="menu">
+        <div class="logo">
+            <img src="https://cdn.chanhtuoi.com/uploads/2023/03/logo-lazada-1.png" alt="">
+        </div>
+
+        <div class="items">
+            <li><i class="fas fa-home"></i><a href="vendorPage.html">Home</a></li>
+            <li><i class="fas fa-wrench"></i><a href="#">Setting</a></li>
+            <li><i class="fas fa-sign-out"></i><a href="#">Sign Out</a></li>
+        </div>
+    </section>
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fas fa-bars"></i>
+                </div>
+                <div class="search">
+                    <i class="far fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <div class="profile">
+                <i class="far fa-bell"></i>
+                <a href="VendorProfilePage.html"><img src="https://i.pinimg.com/564x/d8/33/df/d833dfc0aee636bb8dff1e1a64c490ba.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="rightbox">
+                <div class="profile tabShow">
+                    <h1>Personal Info</h1>
+                    <h2>Role</h2>
+                    <input type="text" class="input" id="roleInput" value="Shipper">
+                    <h2>Name</h2>
+                    <input type="text" class="input" value="Trung">
+                    <h2>Distribution Hub</h2>
+                    <input type="text" class="input" value="Hub 1">
+                    <h2>Email</h2>
+                    <input type="text" class="input" value="trungnguyen@gmail.com">
+                    <h2>Password</h2>
+                    <input type="password" class="input" value="brightcode">
+                    <br>
+                    <button class="btn" id="updateBtn">Update</button>
+                    <h1>Profile Picture</h1>
+                    <img src="https://i.pinimg.com/originals/ff/a0/9a/ffa09aec412db3f54deadf1b3781de2a.png"></img>
+                    <input type="file" name="" id="file" accept="image/*">
+                    <br>
+                    <br>
+                    <label for="file">Edit Picture</label>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer_main">
+        
+              <div class="tag">
+                <img src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png">
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est quaerat ipsa aspernatur ad
+                  sequi, dolore eveniet vitae quasi. Excepturi ipsa odio impedit sequi at hic velit, minus
+                  vero sint. Voluptas?
+                </p>
+        
+              </div>
+        
+              <div class="tag">
+                <h1>Quick Link</h1>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Deal</a>
+                <a href="#">Brands</a>
+                <a href="#">Service</a>
+                <a href="#">Help</a>
+        
+              </div>
+        
+              <div class="tag">
+                <h1>Contact Info</h1>
+                <a href="#"><i class="fas fa-phone"></i></i>+84 12 345 6789</a>
+                <a href="#"><i class="fas fa-phone"></i></i>+84 32 444 699</a>
+                <a href="#"><i class="fas fa-envelope"></i></i>*********@gmail.com</a>
+        
+              </div>
+        
+              <div class="tag">
+                <h1>Follow Us</h1>
+                <div class="social_link">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+        
+              </div>
+        
+              <div class="tag">
+                <h1>Newsletter</h1>
+                <div class="search_bar">
+                  <input type="text" placeholder="You email id here">
+                  <button type="submit">Subscribe</button>
+                </div>
+              </div>
+        
+            </div>
+        
+          </footer>
+    </section>
+    <script>
+        $('#menu-btn').click(function(){
+            $('#menu').toggleClass("active");
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Update button click event handler
+            $('#updateBtn').click(function(e) {
+                e.preventDefault(); // Prevent the default form submission behavior
+
+                // Get the updated values from the input fields
+                var role = $('#roleInput').val();
+                var name = $('#nameInput').val();
+
+                // Update the corresponding elements with the new values
+                $('#roleInput').val(role);
+                $('#nameInput').val(name);
+
+                // Optional: Show a message or perform additional actions
+                alert("Information updated successfully!");
+            });
+        });
+    </script>
+</body>
