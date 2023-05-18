@@ -4,18 +4,27 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.header-wrapper {
+    margin: 0;
+}
+
 main {
     margin: 30px;
 }
 
 form {
     display: flex;
-    margin-top: 80px;
+    margin: 100px 0;
     justify-content: space-between;
 }
 
+hr {
+    margin: 10px 0;
+    width: 100%;
+}
+
 .left-side,
-.right-side {
+form .right-side {
     height: 600px;
     display: flex;
     flex-direction: column;
@@ -96,7 +105,7 @@ h4 {
     font-size: 16px;
 }
 
-button {
+main button {
     padding: 12px;
     width: 200px;
     border-radius: 10px;
@@ -123,28 +132,30 @@ button {
 @media screen and (max-width: 1024px) {
     h1 {
         text-align: center;
+        font-size: 25px;
     }
 
     form {
         flex-direction: column;
         width: max-content;
         gap: 60px;
-        margin: 30px auto;
+        margin: 100px auto;
     }
 
     .left-side {
         width: 100%;
     }
 
-    .right-side {
-        height: auto;
+    form .right-side {
+        height: max-content;
     }
 
     .buttons {
         margin-top: 80px;
+        width: 100%;
     }
 
-    button {
+    .buttons button {
         width: calc(100%/2);
     }
 }
@@ -173,9 +184,14 @@ button {
         gap: 12px;
     }
 
-    button {
+    .buttons button {
         padding: 10px;
     }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 280px) {

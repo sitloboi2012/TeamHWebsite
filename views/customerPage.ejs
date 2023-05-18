@@ -25,19 +25,23 @@
             <input type="text" placeholder="Search..." />
             <button type="submit">Search</button>
           </div>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Deals</a></li>
-            <li><a href="#">Brand</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Help</a></li>
-          </ul>
-          <img
-            src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-2379005.jpg&fm=jpgs"
-            class="user-pic"
-            onclick="toggleMenu()"
-          />
+          
+          <div class="right-side">
+            <img id="burger-menu" src="./images/hamburger-menu.png">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">Brand</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+            <img
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-2379005.jpg&fm=jpgs"
+              class="user-pic"
+              onclick="toggleMenu()"
+            />
+          </div>
 
           <div class="sub-menu-wrap" id="subMenu">
             <div class="sub-menu">
@@ -126,13 +130,13 @@
               <p class="price">$ 18.199</p>
             </div>
           </div>
-          <div class="product-container">
+          <!-- <div class="product-container">
             <img src="./images/p-shoes-4.png" alt="Children's shoes" />
             <div class="product-info">
               <p>Children's shoes</p>
               <p class="price">$ 9.299</p>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <h1>Stationery</h1>
@@ -167,7 +171,7 @@
               <p class="price">$ 3.19</p>
             </div>
           </div>
-          <div class="product-container">
+          <!-- <div class="product-container">
             <img
               src="./images/p-stationery-4.png"
               alt="Notebook to Learn Counting"
@@ -176,7 +180,7 @@
               <p>Notebook to Learn Counting</p>
               <p class="price">$ 2.99</p>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <h1>Phone case</h1>
@@ -211,7 +215,7 @@
               <p class="price">$ 1.49</p>
             </div>
           </div>
-          <div class="product-container">
+          <!-- <div class="product-container">
             <img
               src="./images/p-phonecase-4.png"
               alt="Smiling Phone Case"
@@ -220,9 +224,62 @@
               <p>Smiling Phone Case</p>
               <p class="price">$ 0.3</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
   </body>
+
+  <footer>
+    <div class="footer_main">
+      <div class="tag">
+        <img
+          src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png"
+        />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+          quaerat ipsa aspernatur ad sequi, dolore eveniet vitae quasi.
+          Excepturi ipsa odio impedit sequi at hic velit, minus vero sint.
+          Voluptas?
+        </p>
+      </div>
+
+      <div class="tag">
+        <h1>Quick Link</h1>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Deal</a>
+        <a href="#">Brands</a>
+        <a href="#">Service</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="tag">
+        <h1>Contact Info</h1>
+        <a href="#"><i class="fa-solid fa-phone"></i>+84 12 345 6789</a>
+        <a href="#"><i class="fa-solid fa-phone"></i>+84 32 444 699</a>
+        <a href="#"
+          ><i class="fa-solid fa-envelope"></i>*********@gmail.com</a
+        >
+      </div>
+
+      <div class="tag">
+        <h1>Follow Us</h1>
+        <div class="social_link">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+
+      <div class="tag">
+        <h1>Newsletter</h1>
+        <div class="search_bar">
+          <input type="text" placeholder="Your email id here" />
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>
