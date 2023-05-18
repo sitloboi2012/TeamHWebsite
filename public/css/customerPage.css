@@ -72,10 +72,7 @@ header {
 
 .product-info {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 60px;
+    /* width: 70%; */
 }
 
 .price {
@@ -87,6 +84,25 @@ header {
 
 .products h1 {
     font-size: 28px;
+}
+
+.bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-info img {
+    height: 50px;
+    width: 50px;
+    margin-right: 16px;
+    border: solid;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.bottom-info img:hover {
+    background: #ff955f;
 }
 
 @media screen and (max-width: 1024px) {
