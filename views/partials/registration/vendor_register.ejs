@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>
+        <%= form_title %>
+    </h1>
+    <form method="post" action="vendor-form-process" enctype="multipart/form-data">
+        <div id="form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div id="form">
+            <label for="business_name">Business Name:</label>
+            <input type="text" id="business_name" name="business_name" required>
+            <label for="business_address">Business Address:</label>
+            <input type="text" id="business_address" name="business_address" required>
+        </div>
+        <div id="form">
+            <label for="images" class="drop-container">
+                <span class="drop-title">Profile Picture</span>
+                or
+                <input type="file" id="images" accept="image/*" name="images" required>
+            </label>
+        </div>
+        <input type="submit" id="login-button"></button>
+    </form>
+</div>

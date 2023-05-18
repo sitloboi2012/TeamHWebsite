@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>
+        <%= form_title %>
+    </h1>
+    <form method="post" action="login-verify">
+        <label for="user_type">Register as a:</label>
+        <select name="user_type" id="user_type">
+            <option value="customer">Customer</option>
+            <option value="vendor">Vendor</option>
+            <option value="shipper">Shipper</option>
+        </select>
+        <div id="form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit" id="login-button" onclick="logItem()"></button><br>
+    </form>
+    <p>Don't have account ?</p>
+    <button id="login-button" onclick="window.location = '/registration'">Register</button>
+</div>

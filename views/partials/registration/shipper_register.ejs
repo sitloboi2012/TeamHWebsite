@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>
+        <%= form_title %>
+    </h1>
+    <form method="post" action="shipper-form-process" enctype="multipart/form-data">
+        <div id="form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div id="form">
+            <label for="distribution_hub">Distribution Hub:</label>
+            <select name="distribution_hub" id="distribution_hub">
+                <option value="d1">District 1</option>
+                <option value="d7">District 7</option>
+                <option value="abd">Aiport Business District</option>
+            </select>
+            <label for="images" class="drop-container">
+                <span class="drop-title">Profile Picture</span>
+                or
+                <input type="file" id="images" accept="image/*" name="images" required>
+            </label>
+            <!--<input type="file" id="profile_pic" name="profile_pic"> -->
+        </div>
+        <input type="submit" id="login-button"></button>
+    </form>
+</div>

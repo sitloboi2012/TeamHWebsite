@@ -1,0 +1,137 @@
+body {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	background-color: #ffffff;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	max-width: 900px;
+	background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8), url(https://cdn.dribbble.com/users/6111626/screenshots/14319707/media/dc42f84eedbe9000699e5a6ef77dcd17.jpg?compress=1&resize=400x300&vertical=tophttps://cdn.dribbble.com/users/6111626/screenshots/14319707/media/dc42f84eedbe9000699e5a6ef77dcd17.jpg?compress=1&resize=400x300&vertical=top));
+	background-color: #fcfcfc;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+	color: #f16c20;
+	margin-bottom: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+label {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+input[type=text],
+input[type=password],
+select {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+	background-color: #f16c20;
+	transition: ease-in 0.2s;
+}
+
+input[type=submit], button {
+	background-color: #f16c20;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+input[type=submit]:hover, button {
+	background-color: #e65a1d;
+}
+
+.drop-container {
+	position: relative;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 200px;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px dashed #555;
+	color: #444;
+	cursor: pointer;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.drop-container:hover {
+	background: #eee;
+	border-color: #111;
+}
+
+.drop-container:hover .drop-title {
+	color: #222;
+}
+
+.drop-title {
+	color: #444;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	transition: color .2s ease-in-out;
+}
+
+input[type=file] {
+	width: 350px;
+	max-width: 100%;
+	color: #444;
+	padding: 5px;
+	background: #fff;
+	border-radius: 10px;
+	border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+	margin-right: 20px;
+	border: none;
+	background: #084cdf;
+	padding: 10px 20px;
+	border-radius: 10px;
+	color: #fff;
+	cursor: pointer;
+	transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+	background: #0d45a5;
+}
+
+.custom-file-upload {
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 6px 12px;
+	cursor: pointer;
+}
+
+#form {
+	text-align: center;
+}
