@@ -11,15 +11,6 @@ app.use(express.urlencoded({ extended: true }));
 
 const Product = require('./model/Product');
 
-app.post("/form-processing", upload.single("myFile"), (req, res) => {
-    // Stuff to be added later
-    console.log(req.file);
-    console.log(req.body.product_name);
-    console.log(req.body.category);
-    console.log(req.body.price);
-    res.send("upload success");
-});
-
 app.get("/add-product-vendor", (req, res) => {
     res.render('addproductvendor');
 });
@@ -33,10 +24,6 @@ app.post("/processing", upload.single("myFile"), (req, res) => {
     console.log(req.body.description);
     res.send("upload success");
 });
-
-app.get('/add-product', (req, res) => {
-    res.render('addProduct');
-})
 
 app.get('/customer-page', (req, res) => {
     res.render('customerPage');
