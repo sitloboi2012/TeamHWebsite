@@ -96,13 +96,14 @@ header {
     height: 50px;
     width: 50px;
     margin-right: 16px;
-    border: solid;
+    border: solid 0.25px;
     border-radius: 50px;
     cursor: pointer;
+    background: #ff955f;
 }
 
 .bottom-info img:hover {
-    background: #ff955f;
+    background: #f9bb40;
 }
 
 @media screen and (max-width: 1024px) {
