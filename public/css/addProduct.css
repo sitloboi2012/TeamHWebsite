@@ -3,88 +3,99 @@
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 main {
     margin: 30px;
 }
+
 form {
     display: flex;
     margin-top: 80px;
     justify-content: space-between;
 }
-.left-side, .right-side {
+
+.left-side,
+.right-side {
     height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .left-side {
     width: 44%;
     margin-right: 30px;
 }
+
 .right-side {
-    width: min-content; 
+    width: min-content;
 }
+
 input {
     padding: 12px;
     width: 100%;
     box-sizing: border-box;
 }
-<<<<<<< Updated upstream
-=======
+
 select {
     width: 100%;
     padding: 8px;
 }
->>>>>>> Stashed changes
+
 textarea {
     padding: 12px;
     width: 100%;
     box-sizing: border-box;
     resize: none;
 }
+
 .image-container img {
     width: 200px;
     height: 200px;
     cursor: pointer;
 }
+
 .image-container img {
     /* when user uploads an image, the image is within the container no matter the size */
-<<<<<<< Updated upstream
-    width: 200px;
-    height: 200px;
-=======
     /* width: 200px;
     height: 200px; */
->>>>>>> Stashed changes
 }
+
 .image-container>input {
     /* Hide the button titled "Choose file" */
     display: none;
 }
+
 .last-two {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .last-two img {
     height: calc(100px - 8px);
 }
+
 .image-container {
     display: flex;
     gap: 12px;
 }
+
 .small-text {
     font-size: 14px;
     color: grey;
     margin-top: 12px;
 }
+
 .left-side h4 {
     color: #254e95;
 }
+
 h4 {
     margin-bottom: 12px;
     font-size: 16px;
 }
+
 button {
     padding: 12px;
     width: 200px;
@@ -92,88 +103,97 @@ button {
     border: none;
     cursor: pointer;
 }
+
 .buttons {
     display: flex;
     justify-content: flex-end;
     gap: 12px;
 }
+
 #submit-btn {
-    background: #1D70FF; /*lazada color*/
+    background: #1D70FF;
+    /*lazada color*/
     color: white;
 }
+
 #reset-btn {
     background: gainsboro;
 }
+
 @media screen and (max-width: 1024px) {
     h1 {
         text-align: center;
     }
+
     form {
         flex-direction: column;
         width: max-content;
         gap: 60px;
         margin: 30px auto;
     }
+
     .left-side {
         width: 100%;
     }
+
     .right-side {
-<<<<<<< Updated upstream
-        height: 430px;
-=======
         height: auto;
     }
+
     .buttons {
         margin-top: 80px;
->>>>>>> Stashed changes
     }
+
     button {
         width: calc(100%/2);
     }
 }
+
 @media screen and (max-width: 768px) {
     .image-container {
         flex-wrap: wrap;
     }
-<<<<<<< Updated upstream
-=======
+
     .left-side {
         width: 100%;
     }
+
     .image-container img {
         width: 115px;
         height: 115px;
     }
+
     .last-two img {
         height: calc(115px/2)
     }
->>>>>>> Stashed changes
+
     .last-two {
         flex-direction: row;
         width: 100%;
         gap: 12px;
     }
-<<<<<<< Updated upstream
-    .right-side {
-        height: 500px;
-=======
+
     button {
         padding: 10px;
     }
 }
+
 @media screen and (max-width: 280px) {
     .image-container img {
         width: 98px;
         height: 98px;
     }
+
     .last-two img {
         height: calc(98px/2)
     }
+
     .small-text {
         text-align: justify;
     }
-    .left-side, h1 {
+
+    .left-side,
+    h1 {
         width: 208px;
->>>>>>> Stashed changes
     }
 }

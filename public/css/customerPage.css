@@ -10,7 +10,6 @@ body {
     background-color: #eceaff;
 }
 main {
-    /* width: 80%; */
     margin: 0 150px auto;
     display: flex;
     flex-direction: column;
@@ -75,16 +74,15 @@ header {
     .product {
         flex-wrap: wrap;
     }
-}
-@media screen and (max-width: 768px){
-    .product-container {
-        width: calc(100%);
-    }
     main {
         margin: 0;
     }
     .products {
         width: 70%;
     }
-    
+}
+@media screen and (max-width: 768px){
+    .product-container {
+        width: calc(100%);
+    }
 }

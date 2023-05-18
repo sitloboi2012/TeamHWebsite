@@ -1,7 +1,7 @@
 ////// Change the image displayed when the user uploads product image
 // Only the first image can be changed
 let displayImage = document.getElementById("display-image");
-let inputImage = document.getElementById("input-image");
+let inputImage = document.getElementById("myFile");
 
 inputImage.addEventListener("change", displayUploadImage);
 

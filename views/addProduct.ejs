@@ -4,29 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="addProduct.css" type="text/css" />
-<<<<<<< Updated upstream
-=======
+    <link rel="stylesheet" href="./css/addProduct.css" type="text/css" />
     <link
       rel="icon"
       href="https://lzd-img-global.slatic.net/g/tps/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png"
     />
->>>>>>> Stashed changes
     <title>Add New Product</title>
   </head>
   <body>
     <main>
       <h1>Add New Product</h1>
-      <form method="post" action="processing" enctype="multipart/form-data">
-        <!-- Change 'action' -->
+      <form method="post" action="form-processing" enctype="multipart/form-data">
         <div class="left-side">
           <div>
             <h4>
-              <label for="product-name">Product name</label>
+              <label for="product_name">Product name</label>
             </h4>
             <input
-              id="product-name"
-              name="product-name"
+              id="product_name"
+              name="product_name"
               type="text"
               placeholder="Nike Air Force"
             />
@@ -34,19 +30,13 @@
           </div>
           <div>
             <h4>
-<<<<<<< Updated upstream
-              <label for="brand">Brand</label>
-            </h4>
-            <input id="brand" name="brand" type="text" placeholder="Nike" />
-=======
               <label for="category">Category</label>
             </h4>
             <select id="category" name="category">
-              <option value="skincare">Shoes</option>
+              <option value="shoes">Shoes</option>
               <option value="stationery">Stationery</option>
               <option value="phone-case">Phone case</option>
             </select>
->>>>>>> Stashed changes
           </div>
           <div>
             <h4>
@@ -73,26 +63,27 @@
           <div>
             <h4>Product images</h4>
             <div class="image-container">
-              <label for="input-image">
+              <label for="myFile">
                 <img
                   id="display-image"
-                  src="./public/images/product-demo.png"
+                  src="./images/product-demo.png"
                 />
               </label>
-              <input id="input-image" type="file" />
+              <input type="file" class="admin__input" id="myFile" name="myFile"/>
+              <input class="admin__submit" type="submit" />
 
-              <img src="./public/images/add-image-large.png" />
+              <img src="./images/add-image-large.png" />
               <!-- The last two images -->
               <div class="last-two">
-                <img src="./public/images/add-image-small.png" />
-                <img src="./public/images/add-image-small.png" />
+                <img src="./images/add-image-small.png" />
+                <img src="./images/add-image-small.png" />
               </div>
             </div>
             <p class="small-text">
-              You need to add 1 to 4 images. Picture dimension should be 200 x
-              200 px. File size limit 2MB. Image must not be blurry.
+              You need to add 1 to 4 images. Picture dimension should be 400 x
+              400 px. Images must not be blurry.
             </p>
-          </div>
+          </div> 
           <div class="buttons">
             <button id="reset-btn" type="reset">Reset</button>
             <button id="submit-btn" type="submit">Submit</button>
@@ -100,6 +91,6 @@
         </div>
       </form>
     </main>
-    <script src="./addProduct.js"></script>
+    <script src="./js/addProduct.js"></script>
   </body>
 </html>
