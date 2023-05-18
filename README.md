@@ -10,6 +10,8 @@ Web Programming Group Assignment 2
         - __shipper-info__: contains all the information of the shipper role
         - __customer-info__: contains all the information of the customer role
         - __vendor-info__: contains all the information of the vendor role
+4. First page you should go to registration page as you need to have account or else you wont be able to log into other page.
+5. Create account then login in and then you are free to go
 
 # Folder Structure
 ~~~
