@@ -21,13 +21,6 @@ const products = [
         image: 'p-shoes-3.png'
     },
     {
-        name: "Children's shoes",
-        category: 'shoes',
-        price: 9.299,
-        description: 'Hand-sewn shoes for kids.',
-        image: 'p-shoes-4.png'
-    },
-    {
         name: "Magnetic Whiteboard",
         category: 'stationery',
         price: 4.599,
@@ -49,13 +42,6 @@ const products = [
         image: 'p-stationery-3.png'
     },
     {
-        name: "Notebook to Learn Counting",
-        category: 'stationery',
-        price: 2.99,
-        description: 'Help children learn counting faster with illustrations.',
-        image: 'p-stationery-4.png'
-    },
-    {
         name: "Bear Phone Case",
         category: 'phone case',
         price: 1.32,
@@ -75,13 +61,6 @@ const products = [
         price: 1.49,
         description: 'Help you watch videos on your phone more easily.',
         image: 'p-phonecase-3.png'
-    },
-    {
-        name: "Smiling Phone Case",
-        category: 'phone case',
-        price: 0.3,
-        description: 'A phone case to cheer you up.',
-        image: 'p-phonecase-4.png'
     },
 ]
 
