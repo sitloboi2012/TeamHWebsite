@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Replace <password> with the actual password for the user
-mongoose.connect('mongodb+srv://vuminhha2504:Mystyle16,bdw@ha-vu.herubsk.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://s3978681:mypassword@cosc2430-group-project.chsvfpu.mongodb.net/?retryWrites=true&w=majority')
     .then(() => console.log('Connected to MongoDB Atlas'))
     .catch((error) => console.log(error.message));
 
