@@ -354,17 +354,6 @@ app.get("/vendor-profile", (req, res) => {
     })
 })
 
-// UPDATE product
-app.post('/product/:id/update', (req, res) => {
-  const updates = Object.keys(req.body);
-  const allowedUpdates = ['name', 'price', 'description', 'onSale', 'categories'];
-  const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
-
-  if (!isValidOperation) {
-    return res.send({ error: 'Invalid updates!' });
-  }
-})
-
 // CUSTOMER
 app.get('/customer-page', (req, res) => {
   Product.findById()

@@ -494,38 +494,63 @@ button {
     background: #fff;
     position: relative;
     box-shadow: 2px 5px 20px rgba(119, 119, 119, .5);
-    margin-top: 20px;
+    margin-top: 95px;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 
 .rightbox {
-    width: 60%;
-    margin-left: 27%;
-}
-
-.tabShow {
-    transition: all .5s ease-in;
+    /* width: 60%;
+    margin-left: 27%; */
     width: 80%;
 }
 
+.tabShow {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: all .5s ease-in;
+    width: 100%;
+    height: max-content;
+    border: solid;
+    padding: 40px 70px;
+    border-radius: 30px;
+    text-align: center;
+    background: #b699ec;
+}
+.tabShow div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+.tabShow input {
+    width: 85%;
+    /* background: rgb(225, 224, 224); */
+    text-align: center;
+    border-radius: 20px;
+}
 h1 {
     font-family: "Monsterrat", sans-serif;
-    color: #3f4ae7;
-    font-size: 35px;
-    margin-top: 80px;
+    color: #2b2b2b;
+    font-size: 38px;
+    /* margin-top: 80px; */
     margin-bottom: 35px;
     padding-top: 30px;
 }
 
 h2 {
-    color: #777;
+    color: #3139b4;
+    font-weight: bolder;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1px;
     margin-left: 2px;
-    margin-top: 10px;
+    /* margin-top: 15px; */
 }
 
 .input,
@@ -555,7 +580,8 @@ span {
     padding: 7px 15px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, .2);
     cursor: pointer;
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    margin: 0 auto;
 }
 
 
@@ -580,9 +606,11 @@ label {
     background-color: black;
     color: white;
     border: 1px solid #3498db;
-    padding: 2px 15px;
+    padding: 5px;
     border-radius: 5px;
     transition: all 0.3s;
+    width: 85%;
+    text-align: center;
 }
 
 label:hover {
@@ -686,8 +714,15 @@ footer .end span {
     color: #089da1;
     margin-left: 10px;
 }
+.profile-image {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     #menu {
         width: 350px;
         position: fixed;
@@ -752,9 +787,12 @@ footer .end span {
     .col-4 {
         flex-basis: 100%;
     }
+    .rightbox {
+        width: 60%;
+    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     main {
         padding: 20px;
     }
@@ -765,5 +803,11 @@ footer .end span {
 
     .footer-menu {
         margin-bottom: 20px;
+    }
+    .rightbox {
+        width: 80%;
+    }
+    .tabShow input {
+        width: 90%;
     }
 }

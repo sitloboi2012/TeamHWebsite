@@ -5,9 +5,9 @@ body {
 
 .container {
 	margin: 0 auto;
-	width: 100%;
+	width: 50%;
 	height: 100%;
-	max-width: 900px;
+	/* max-width: 900px; */
 	background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8), url(https://cdn.dribbble.com/users/6111626/screenshots/14319707/media/dc42f84eedbe9000699e5a6ef77dcd17.jpg?compress=1&resize=400x300&vertical=tophttps://cdn.dribbble.com/users/6111626/screenshots/14319707/media/dc42f84eedbe9000699e5a6ef77dcd17.jpg?compress=1&resize=400x300&vertical=top));
 	background-color: #fcfcfc;
 	background-position: center;
@@ -29,6 +29,7 @@ form {
 	display: flex;
 	flex-direction: column;
 	padding: 20px;
+	gap: 30px;
 }
 
 label {
@@ -132,16 +133,54 @@ input[type=file]::file-selector-button:hover {
 	padding: 6px 12px;
 	cursor: pointer;
 }
-
+#form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+#form div {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+#form input {
+	width: 100%;
+	margin-right: 0;
+}
+form select {
+	border: 0.25px solid;
+}
+.login-choose {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.login-choose select{
+	margin-right: 0;
+}
 .form {
 	text-align: center;
 }
 .container input {
-	border-bottom: 0.5px solid;
+	border-bottom: 1px solid;
 }
 .important-info {
 	display: flex;
 	justify-content: center;
+}
+@media screen and (max-width: 1228px) {
+	#form {
+		flex-direction: column;
+		gap: 10px;
+	}
+	#form>div {
+		width: 100%;
+	}
+	.username div:nth-child(2),
+	.password div:nth-child(2) {
+		width: 100%;
+	}
 }
 @media screen and (max-width: 1024px) {
 	.container h1 {
@@ -158,5 +197,14 @@ input[type=file]::file-selector-button:hover {
 	}
 	.form {
 		display: flex;
+	}
+	.container {
+		width: 90%;
+	}
+	.username,
+	.password {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 }
