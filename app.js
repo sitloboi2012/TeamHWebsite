@@ -1,3 +1,11 @@
+// RMIT University Vietnam
+//   Course: COSC2430 Web Programming
+//   Semester: 2023A
+//   Assessment: Assignment 2
+//   Author: Huy, Ha
+//   ID: s3823794, s3978681
+//   Acknowledgement: Acknowledge the resources that you use here.
+
 // import libraries
 const express = require("express");
 const expressLayouts = require("express-ejs-layouts");
