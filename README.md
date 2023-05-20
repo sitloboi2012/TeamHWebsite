@@ -42,3 +42,11 @@ localhost:3000/ : login page
 /customer-page: the main customer page
 /customer-profile: the customer profile page
 ~~~
+
+# Link Github
+- https://github.com/sitloboi2012/TeamHWebsite
+
+# Current Account (username / password)
+- Shipper: shipper1 / mypassword
+- Vendor: great_phone_case / mypassword
+- Customer: testing1 / 123456
