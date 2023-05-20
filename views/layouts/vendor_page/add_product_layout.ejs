@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title><%= title %></title>
-    <link rel="stylesheet" href="/css/vendor_page.css">
-    <script src="/js/addProduct.js"></script>
-    <script src="/js/function.js"></script>
+    <link rel="stylesheet" href="/css/vendor_page.css" />
+    <!-- <script src="/js/function.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+  </head>
 
-<body>
+  <body>
     <script>
-        checkLogin();
+      checkLogin();
     </script>
     <%- include('../../partials/vendor_page/add_product_page.ejs'); %>
     <script>
-        $('#menu-btn').click(function () {
-            $('#menu').toggleClass("active");
-        })
+      $("#menu-btn").click(function () {
+        $("#menu").toggleClass("active");
+      });
     </script>
-</body>
+  </body>
+</html>

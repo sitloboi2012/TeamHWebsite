@@ -9,11 +9,13 @@ var bodyParser = require('body-parser');
 var LocalStorage = require('node-localstorage').LocalStorage,
   localStorage = new LocalStorage('./scratch');
 
+
 var Shipper = require("./models/shipper.model");
 var Customer = require("./models/customer.model");
 var Vendor = require("./models/vendor.model");
 var Username = require("./models/username.model");
 const port = 3000;
+const Product = require('./models/Product');
 
 
 // view engine setup
@@ -54,7 +56,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const upload = multer({ 'dest': 'public/upload_images' });
+const upload = multer({ 'dest': 'public/upload_images/' });
 
 app.post('/login-verify', (req, res) => {
 
@@ -256,15 +258,43 @@ app.get('/vendor-page', (req, res) => {
     })
 });
 
-
 app.get('/vendor-page/all-product', (req, res) => {
-  res.render("vendor_all_product",
+  Product.find()
+  .then((products) => {
+    res.render("vendor_all_product",
     {
+      products: products,
       title: "Vendor Page",
       layout: "layouts/vendor_page/all_product_layout.ejs"
     })
+  })
+  .catch((error) => {
+    console.log(error.message);
+  })
 });
 
+// app.post('/vendor-page/add-product', (req, res) => {
+//   Product.find()
+//   .then((products) => {
+//     res.render("vendor_add_product",
+//     {
+//       products: products,
+//       title: "Vendor Page",
+//       layout: "layouts/vendor_page/add_product_layout.ejs"
+//     })
+//   })
+//   .catch((error) => {
+//     console.log(error.message);
+//   })
+// });
+
+app.post("/vendor-page/form-processing", upload.single("image"), (req, res) => {
+  console.log(req.file);
+  const product = new Product(req.body);
+  product.save()
+  .then(() => res.redirect('vendor_all_product'))
+  .catch((error) => res.send(error));
+});
 
 app.get('/vendor-page/add-product', (req, res) => {
   res.render("vendor_add_product",
@@ -277,28 +307,47 @@ app.get('/vendor-page/add-product', (req, res) => {
 app.get("/vendor-profile", (req, res) => {
   res.render("vendor_profile",
     {
-      title: "Shipper Page",
+      title: "Vendor Page",
       layout: "layouts/vendor_page/vendor_profile_layout.ejs"
     })
 })
 
+// UPDATE product
+app.post('/product/:id/update', (req, res) => {
+  const updates = Object.keys(req.body);
+  const allowedUpdates = ['name', 'price', 'description', 'onSale', 'categories'];
+  const isValidOperation = updates.every((update) => allowedUpdates.includes(update));
+
+  if (!isValidOperation) {
+    return res.send({ error: 'Invalid updates!' });
+  }
+})
 
 // CUSTOMER
 app.get('/customer-page', (req, res) => {
-  res.render("customer_page",
+  Product.findById()
+  .then((products) => {
+    res.render("customer_page",
     {
-      title: "Vendor Page",
+      products: products,
+      title: "Customer Page",
       layout: "layouts/customer_page/customer_main_layout.ejs"
     })
+  })
+  .catch((error) => {
+    console.log(error.message);
+  })
+  
 });
 
 app.get("/customer-profile", (req, res) => {
   res.render("customer_profile",
     {
-      title: "Shipper Page",
+      title: "Customer Page",
       layout: "layouts/customer_page/customer_profile_layout.ejs"
     })
 })
+
 
 // listen on port 3000
 app.listen(port, () => console.info("Listening from port", port))
