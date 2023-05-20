@@ -399,19 +399,28 @@ app.get("/shopping-cart", (req, res) => {
 })
 
 app.post("/order-generate", (req, res) => {
+
+  const total_price = req.body.price
+      .map(function (elt) { // assure the value can be converted into an integer
+          return /^\d+$/.test(elt) ? parseInt(elt) : 0;
+      })
+      .reduce(function (a, b) { // sum all resulting numbers
+          return a + b
+      });
+
   const newOrder = new Order({
       customer_name: req.body.name,
       address: req.body.address,
       status: "Active",
-      total_price: req.body.price.reduce((partialSum, a) => partialSum + a, 0),
-      product_list: req.body.product,
+      total_price: total_price,
+      products_list: req.body.product,
       business_name: req.body.name,
       business_address: req.body.address
   })
 
   newOrder.save()
-  .then(() => res.redirect('/customer-page'))
-  .catch(error => res.send(error));
+      .then(() => res.redirect('/customer-page'))
+      .catch(error => res.send(error.message));
 })
 
 

@@ -37,7 +37,6 @@
             tr.remove();
         }
 
-        console.log({ "product": JSON.parse(localStorage.getItem("product_list")) })
         var product_list = JSON.parse(localStorage.getItem("product_list"))
         var price_list = JSON.parse(localStorage.getItem("price_list"))
         product_list.forEach((product, index) => {
@@ -45,8 +44,8 @@
             var numb = price.match(/\d/g);
             numb = parseInt(numb.join(""));
             var html = "<tr>";
-            html += `<td><input type=hidden name=product[] style='visibility:hidden' value=${product}>` + product + "</td>";
-            html += `<td><input type=hidden name=price[] style='visibility:hidden' value=${numb}>` + price + "</td>";
+            html += `<td><input type=hidden name=product style='visibility:hidden' value=${product}>` + product + "</td>";
+            html += `<td><input type=hidden name=price style='visibility:hidden' value=${numb}>` + price + "</td>";
             html += '<td><input type="number" min="1" value="1" /></td>';
             html += `<td><input type=hidden name=subtotal[] style='visibility:hidden' value=${numb}>` + price + "</td>";
             html += '<td><button class="remove-btn" onclick="removeItem()">Remove</button></td>'
