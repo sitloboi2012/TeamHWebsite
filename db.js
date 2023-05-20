@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.connect('YOUR URI',
+mongoose.connect('mongodb+srv://s3978681:mypassword@cosc2430-group-project.chsvfpu.mongodb.net/?retryWrites=true&w=majority',
     { useNewUrlParser: true, useUnifiedTopology: true });
 var conn = mongoose.connection;
 conn.on('connected', function () {

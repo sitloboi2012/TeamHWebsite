@@ -1,126 +1,54 @@
 <main>
-    <div class="banner-container">
-        <img
-            src="https://lzd-img-global.slatic.net/g/icms/images/ims-web/72a15f8a-4f47-4881-afeb-9f5f8d38900a.jpg_2200x2200q90.jpg_.webp" />
+  <div class="banner-container">
+    <img
+      src="https://lzd-img-global.slatic.net/g/icms/images/ims-web/72a15f8a-4f47-4881-afeb-9f5f8d38900a.jpg_2200x2200q90.jpg_.webp"
+    />
+  </div>
+  <div>
+    <span>Price range</span>
+    <span>(MIN)</span>
+    <span> - </span>
+    <span>(MAX)</span>
+    <button>Apply</button>
+  </div>
+
+  <% products.forEach(function(product) { %>
+  <section class="<%= product.category %>">
+    <h1><%= product.category %></h1>
+    <div class="product <%= product.category %>">
+      <div class="product-container">
+        <img src="/images/<%= product.image %>" alt="<%= product.name %>" />
+        <div class="bottom-info">
+          <div class="product-info">
+            <p><%= product.name %></p>
+            <p class="price">$ <%= product.price %></p>
+          </div>
+          <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
+        </div>
+      </div>
+      <!-- <div class="product-container">
+                    <img src="/images/p-shoes-2.png" alt="Leather Male Sport Shoes" />
+
+                    <div class="bottom-info">
+                        <div class="product-info">
+                            <p>Leather Male Sport Shoes</p>
+                            <p class="price">$ 15.66</p>
+                        </div>
+                        <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
+                    </div>
+                </div>
+                <div class="product-container">
+                    <img src="/images/p-shoes-3.png" alt="Height-Raising Sport Shoes" />
+
+                    <div class="bottom-info">
+                        <div class="product-info">
+                            <p>Height-Raising Sport Shoes</p>
+                            <p class="price">$ 18.199</p>
+                        </div>
+                        <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
+                    </div>
+                </div> -->
     </div>
-    <div>
-        <span>Price range</span>
-        <span>(MIN)</span>
-        <span> - </span>
-        <span>(MAX)</span>
-        <button>Apply</button>
-    </div>
-    <section class="products">
-        <h1>Shoes</h1>
-        <div class="product shoes">
-            <div class="product-container">
-                <img src="/images/p-shoes-1.png" alt="Comfortable Doll Shoes with Ribbon" />
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Comfortable Doll Shoes with Ribbon</p>
-                        <p class="price">$ 12.59</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-            <div class="product-container">
-                <img src="/images/p-shoes-2.png" alt="Leather Male Sport Shoes" />
-
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Leather Male Sport Shoes</p>
-                        <p class="price">$ 15.66</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-            <div class="product-container">
-                <img src="/images/p-shoes-3.png" alt="Height-Raising Sport Shoes" />
-
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Height-Raising Sport Shoes</p>
-                        <p class="price">$ 18.199</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-        </div>
-
-        <h1>Stationery</h1>
-        <div class="product stationery">
-            <div class="product-container">
-                <img src="/images/p-stationery-1.png" alt="Magnetic Whiteboard" />
-
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Magnetic Whiteboard</p>
-                        <p class="price">$ 4.599</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-            <div class="product-container">
-                <img src="/images/p-stationery-2.png" alt="Deli Black pen" />
-
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Deli Black Pen</p>
-                        <p class="price">$ 0.25</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-            <div class="product-container">
-                <img src="/images/p-stationery-3.png" alt="Korean Pen stand" />
-
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Korean Pen Stand</p>
-                        <p class="price">$ 3.19</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-
-        </div>
-
-        <h1>Phone case</h1>
-        <div class="product phonecase">
-            <div class="product-container">
-                <img src="/images/p-phonecase-1.png" alt="Bear Phone Case" />
-
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Bear Phone Case</p>
-                        <p class="price">$ 1.32</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-            <div class="product-container">
-                <img src="/images/p-phonecase-2.png" alt="Transparent Phone Case" />
-
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Transparent Phone Case</p>
-                        <p class="price">$ 0.99</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-            <div class="product-container">
-                <img src="/images/p-phonecase-3.png" alt="Self-Standing Phone Case" />
-
-                <div class="bottom-info">
-                    <div class="product-info">
-                        <p>Self-Standing Phone Case</p>
-                        <p class="price">$ 1.49</p>
-                    </div>
-                    <img src="/images/shopping-cart-icon.png" alt="shopping-cart-icon" />
-                </div>
-            </div>
-
-        </div>
-    </section>
+  </section>
+  <% }); %>
 </main>

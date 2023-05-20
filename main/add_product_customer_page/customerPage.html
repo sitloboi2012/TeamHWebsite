@@ -4,32 +4,320 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="customerPage.css" type="text/css" />
-    <title>Customer page</title>
-    <!-- Need to change page name! -->
+    <link
+      rel="stylesheet"
+      href="../../public/css/header_footer.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./customerPage.css" type="text/css" />
+    <link
+      rel="icon"
+      href="https://lzd-img-global.slatic.net/g/tps/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png"
+    />
+    <title>Hazada - Add New Product</title>
   </head>
   <body>
-    <img id="header" src="/header.png" />
-    <!-- I use an image only for now, I will change it later -->
-    <div class="banner-container"></div>
-    <div>
-      <span>Price range</span>
-      <span>(MIN)</span>
-      <span> - </span>
-      <span>(MAX)</span>
-      <button>Apply</button>
-    </div>
-    <div class="product-section">
-      <div class="product-container"></div>
-      <div class="product-container"></div>
-      <div class="product-container"></div>
-      <div class="product-container"></div>
-      <div class="product-container"></div>
-    </div>
-    <a
-      href="https://www.figma.com/file/lSy9rKUsCUSCW80N3XDLTw/customerPage?node-id=1%3A2&t=MkzCG6brqSzjTeEB-1"
-      target="_blank"
-      >Design link (Open in a new tab)</a
-    >
+    <header>
+      <div class="header-wrapper">
+        <nav>
+          <img
+            src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png"
+            alt="Lazada logo-img"
+          />
+          <div class="search-box">
+            <input type="text" placeholder="Search..." />
+            <button type="submit">Search</button>
+          </div>
+
+          <div class="right-side">
+            <img
+              id="burger-menu"
+              src="../../public/images/hamburger-menu.png"
+            />
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">Deals</a></li>
+              <li><a href="#">Brand</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+            <img
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-2379005.jpg&fm=jpgs"
+              class="user-pic"
+              onclick="toggleMenu()"
+            />
+          </div>
+
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img
+                  src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-2379005.jpg&fm=jpg"
+                />
+                <h3>John Deez</h3>
+              </div>
+              <hr />
+
+              <a href="#" class="sub-menu-link">
+                <img
+                  src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?cs=srgb&dl=pexels-italo-melo-2379005.jpg&fm=jpg"
+                />
+                <p>Edit Profile</p>
+                <span> > </span>
+              </a>
+
+              <a href="#" class="sub-menu-link">
+                <i class="fa-regular fa-gear"></i>
+                <p>Settings and Privacy</p>
+                <span> > </span>
+              </a>
+
+              <a href="#" class="sub-menu-link">
+                <i class="fa-solid fa-circle-question"></i>
+                <p>Help & Support</p>
+                <span> > </span>
+              </a>
+
+              <a href="#" class="sub-menu-link">
+                <i class="fa-regular fa-right-from-bracket"></i>
+                <p>Logout</p>
+                <span> > </span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="banner-container">
+        <img
+          src="https://lzd-img-global.slatic.net/g/icms/images/ims-web/72a15f8a-4f47-4881-afeb-9f5f8d38900a.jpg_2200x2200q90.jpg_.webp"
+        />
+      </div>
+      <div>
+        <span>Price range</span>
+        <span>(MIN)</span>
+        <span> - </span>
+        <span>(MAX)</span>
+        <button>Apply</button>
+      </div>
+      <section class="products">
+        <h1>Shoes</h1>
+        <div class="product shoes">
+          <div class="product-container">
+            <img
+              src="../../public/images/p-shoes-1.png"
+              alt="Comfortable Doll Shoes with Ribbon"
+            />
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Comfortable Doll Shoes with Ribbon</p>
+                <p class="price">$ 12.59</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+          <div class="product-container">
+            <img
+              src="../../public/images/p-shoes-2.png"
+              alt="Leather Male Sport Shoes"
+            />
+
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Leather Male Sport Shoes</p>
+                <p class="price">$ 15.66</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+          <div class="product-container">
+            <img
+              src="../../public/images/p-shoes-3.png"
+              alt="Height-Raising Sport Shoes"
+            />
+
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Height-Raising Sport Shoes</p>
+                <p class="price">$ 18.199</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <h1>Stationery</h1>
+        <div class="product stationery">
+          <div class="product-container">
+            <img
+              src="../../public/images/p-stationery-1.png"
+              alt="Magnetic Whiteboard"
+            />
+
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Magnetic Whiteboard</p>
+                <p class="price">$ 4.599</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+          <div class="product-container">
+            <img
+              src="../../public/images/p-stationery-2.png"
+              alt="Deli Black pen"
+            />
+
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Deli Black Pen</p>
+                <p class="price">$ 0.25</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+          <div class="product-container">
+            <img
+              src="../../public/images/p-stationery-3.png"
+              alt="Korean Pen stand"
+            />
+
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Korean Pen Stand</p>
+                <p class="price">$ 3.19</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <h1>Phone case</h1>
+        <div class="product phonecase">
+          <div class="product-container">
+            <img
+              src="../../public/images/p-phonecase-1.png"
+              alt="Bear Phone Case"
+            />
+
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Bear Phone Case</p>
+                <p class="price">$ 1.32</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+          <div class="product-container">
+            <img
+              src="../../public/images/p-phonecase-2.png"
+              alt="Transparent Phone Case"
+            />
+
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Transparent Phone Case</p>
+                <p class="price">$ 0.99</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+          <div class="product-container">
+            <img
+              src="../../public/images/p-phonecase-3.png"
+              alt="Self-Standing Phone Case"
+            />
+
+            <div class="bottom-info">
+              <div class="product-info">
+                <p>Self-Standing Phone Case</p>
+                <p class="price">$ 1.49</p>
+              </div>
+              <img
+                src="../../public/images/shopping-cart-icon.png"
+                alt="shopping-cart-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
+
+  <footer>
+    <div class="footer_main">
+      <div class="tag">
+        <img
+          src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png"
+        />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est quaerat
+          ipsa aspernatur ad sequi, dolore eveniet vitae quasi. Excepturi ipsa
+          odio impedit sequi at hic velit, minus vero sint. Voluptas?
+        </p>
+      </div>
+
+      <div class="tag">
+        <h1>Quick Link</h1>
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Deal</a>
+        <a href="#">Brands</a>
+        <a href="#">Service</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="tag">
+        <h1>Contact Info</h1>
+        <a href="#"><i class="fa-solid fa-phone"></i>+84 12 345 6789</a>
+        <a href="#"><i class="fa-solid fa-phone"></i>+84 32 444 699</a>
+        <a href="#"><i class="fa-solid fa-envelope"></i>*********@gmail.com</a>
+      </div>
+
+      <div class="tag">
+        <h1>Follow Us</h1>
+        <div class="social_link">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+
+      <div class="tag">
+        <h1>Newsletter</h1>
+        <div class="search_bar">
+          <input type="text" placeholder="Your email id here" />
+          <button type="submit">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </footer>
 </html>

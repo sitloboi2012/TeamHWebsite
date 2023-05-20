@@ -265,6 +265,7 @@ footer .footer_main .tag .search_bar button {
     border-radius: 25px;
     color: #fff;
     cursor: pointer;
+    font-size: small;
 }
 
 footer .end {

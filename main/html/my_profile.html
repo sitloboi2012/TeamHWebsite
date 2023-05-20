@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Profile</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/my_profile.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://lzd-img-global.slatic.net/g/p/68a3c135bd49ae699e90a4da955b7ffb.png_1200x1200q80.png_.webp"
+    />
+    <script src="../../public/js/login_register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+  </head>
+  <body>
+    <section id="menu">
+      <div class="logo">
+          <img src="https://cdn.chanhtuoi.com/uploads/2023/03/logo-lazada-1.png" alt="lazada logo">
+      </div>
+  
+      <div class="items">
+          <li><i class="fas fa-home"></i><a href="/customer-page">Home</a></li>
+          <li><i class="fas fa-wrench"></i><a href="#">Setting</a></li>
+          <li><i class="fas fa-sign-out"></i><a href="/" onclick="deleteItem()">Sign Out</a></li>
+      </div>
+  </section>
+  <section id="interface">
+      <div class="navigation">
+          <div class="n1">
+              <div>
+                  <i id="menu-btn" class="fas fa-bars"></i>
+              </div>
+              <div class="search">
+                  <i class="far fa-search"></i>
+                  <input type="text" placeholder="Search">
+              </div>
+          </div>
+          <div class="profile">
+              <i class="far fa-bell"></i>
+              <a href="VendorProfilePage.html"><img
+                      src="https://i.pinimg.com/564x/d8/33/df/d833dfc0aee636bb8dff1e1a64c490ba.jpg" alt="profile image"></a>
+          </div>
+      </div>
+      <div class="container">
+          <div class="rightbox">
+              <div class="profile tabShow">
+                  <h1>Personal Info</h1>
+                  <h2>Role</h2>
+                  <input type="text" class="input" value="Customer">
+                  <h2>Name</h2>
+                  <input type="text" class="input" value="Magaritas">
+                  <h2>Address</h2>
+                  <input type="text" class="input" value="District 7">
+                  <h2>Email</h2>
+                  <input type="text" class="input" value="hieudang@gmail.com">
+                  <h2>Password</h2>
+                  <input type="password" class="input" value="brightcode">
+                  <br>
+                  <button class="btn">Update</button>
+                  <h1>Profile Picture</h1>
+                  <img src="https://i.pinimg.com/originals/ff/a0/9a/ffa09aec412db3f54deadf1b3781de2a.png"></img>
+                  <input type="file" name="" id="file" accept="image/*">
+                  <br>
+                  <br>
+                  <label for="file">Edit Picture</label>
+              </div>
+          </div>
+      </div>
+  </section>
+    <script>
+      checkLogin();
+    </script>
+  </body>
+
+  <footer>
+    <div class="footer_main">
+        <div class="tag">
+            <img src="https://lzd-img-global.slatic.net/g/tps/tfs/TB1PApewFT7gK0jSZFpXXaTkpXa-200-200.png" />
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+                quaerat ipsa aspernatur ad sequi, dolore eveniet vitae quasi.
+                Excepturi ipsa odio impedit sequi at hic velit, minus vero sint.
+                Voluptas?
+            </p>
+        </div>
+
+        <div class="tag">
+            <h1>Quick Link</h1>
+            <a href="#">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Deal</a>
+            <a href="#">Brands</a>
+            <a href="#">Service</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="tag">
+            <h1>Contact Info</h1>
+            <a href="#"><i class="fa-solid fa-phone"></i>+84 12 345 6789</a>
+            <a href="#"><i class="fa-solid fa-phone"></i>+84 32 444 699</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i>*********@gmail.com</a>
+        </div>
+
+        <div class="tag">
+            <h1>Follow Us</h1>
+            <div class="social_link">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+        </div>
+
+        <div class="tag">
+            <h1>Newsletter</h1>
+            <div class="search_bar">
+                <input type="text" placeholder="Your email id here" />
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
