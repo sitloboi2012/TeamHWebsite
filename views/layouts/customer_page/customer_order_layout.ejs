@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vendor Page</title>
+        <link rel="stylesheet" type="text/css" href="/css/shopping_cart.css">
+        <link rel="stylesheet" type="text/css" href="/css/header_footer.css">
+        <link rel="stylesheet" type="text/css" href="/css/login_register.css">
+        <script src="/js/customer_function.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    </head>
+<body>
+    <script>
+        checkLogin();
+    </script>
+    <%- include('../header.ejs'); %>
+    <%- include('../../partials/customer_page/shopping_cart_page.ejs'); %>
+    <%- include('../footer.ejs'); %>
+</body>
